@@ -7,7 +7,7 @@ apply plugin: 'application'
 targetCompatibility = 1.8
 sourceCompatibility = 1.8
 
-mainClassName = "it.unibo.gciatto.mnk.console.Main"
+mainClassName = "it.unibo.gciatto.mnk.gui.JMNKGui"
 
 repositories {
     mavenCentral()
@@ -15,11 +15,20 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
-//    runconsole 'build'
 }
 
-//task runconsole {
-//
+jar {
+    archiveName = "mnkgame.jar"
+
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+}
+
+//task runconsole(type: JavaExec) {
+//    standardInput = System.in
+//    standardOutput = System.out
+//    main = 'it.unibo.gciatto.mnk.console.Main'
 //}
 
 run {
