@@ -41,7 +41,7 @@ class MNKMatchImpl implements MNKMatch {
         if (k > Math.min(m, n)) {
             throw new IllegalArgumentException("Required: k <= min(m, n)");
         }
-        this.grid = Matrixes.mutable.generate(m, n, (i, j) -> Symbols.EMPTY);
+        this.grid = Matrixes.newMutableMatrix(m, n, Symbols.EMPTY);
         this.k = k;
         this.player = Objects.requireNonNull(first);
         this.turn = 1;
