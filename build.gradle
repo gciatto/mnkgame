@@ -1,0 +1,28 @@
+group 'it.unibo.gciatto'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+targetCompatibility = 1.8
+sourceCompatibility = 1.8
+
+mainClassName = "it.unibo.gciatto.mnk.console.Main"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+//    runconsole 'build'
+}
+
+//task runconsole {
+//
+//}
+
+run {
+    standardInput = System.in
+    standardOutput = System.out
+}
