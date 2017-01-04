@@ -5,26 +5,13 @@ import java.util.Objects;
 /**
  * Created by gciatto on 01/01/17.
  */
-public class TurnData {
-    private final MNKMatch source;
-    private final int turn;
-    private final Symbols player;
-
-    public TurnData(MNKMatch source, int turn, Symbols player) {
-        this.source = Objects.requireNonNull(source);
-        this.turn = turn;
-        this.player = player;
+public class TurnData extends AbstractData {
+    public TurnData(MNKMatch source, int turn, Symbols player, int i, int j) {
+        super(source, turn, Objects.requireNonNull(player), i, j);
     }
 
-    public MNKMatch getSource() {
-        return source;
-    }
-
-    public int getTurn() {
-        return turn;
-    }
-
+    @Override
     public Symbols getPlayer() {
-        return player;
+        return super.getPlayer();
     }
 }
