@@ -1,7 +1,7 @@
 package it.unibo.gciatto.mnk.console.control.impl;
 
 import it.unibo.gciatto.mnk.MNKMatch;
-import it.unibo.gciatto.mnk.console.control.MNKControl;
+import it.unibo.gciatto.mnk.console.control.MNKConsoleControl;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 /**
  * Created by gciatto on 02/01/17.
  */
-class MNKConsoleControlImpl implements MNKControl {
+class MNKConsoleConsoleControlImpl implements MNKConsoleControl {
     private static Pattern COORDS_PATTERN = Pattern.compile("([a-z])\\s*([a-z])");
     private final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     private Optional<MNKMatch> match = Optional.empty();

@@ -24,7 +24,7 @@ public class FuncUtils {
                 length.setValueAsInt(length.getValueAsInt() + 1);
             } else {
                 if (symbol.getValue() != null) {
-                    lst.add(Tuples.tuple(index.getValueAsInt(), length.getValueAsInt(), symbol.getValue()));
+                    lst.add(Tuples.newTuple(index.getValueAsInt(), length.getValueAsInt(), symbol.getValue()));
                 }
                 symbol.setValue(e);
                 index.setValueAsInt(i.getValueAsInt());
@@ -33,7 +33,7 @@ public class FuncUtils {
             i.setValueAsInt(i.getValueAsInt() + 1);
         });
         if (symbol.getValue() != null) {
-            lst.add(Tuples.tuple(index.getValueAsInt(), length.getValueAsInt(), symbol.getValue()));
+            lst.add(Tuples.newTuple(index.getValueAsInt(), length.getValueAsInt(), symbol.getValue()));
         }
         return lst;
     }

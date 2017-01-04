@@ -7,7 +7,7 @@ import it.unibo.gciatto.mnk.MNKMatch;
 import it.unibo.gciatto.mnk.MatchData;
 import it.unibo.gciatto.mnk.Symbols;
 import it.unibo.gciatto.mnk.TurnData;
-import it.unibo.gciatto.mnk.console.view.MNKView;
+import it.unibo.gciatto.mnk.console.view.MNKConsoleView;
 import it.unibo.gciatto.observe.Observer;
 
 import java.util.Optional;
@@ -17,7 +17,7 @@ import java.util.stream.IntStream;
 /**
  * Created by gciatto on 31/12/16.
  */
-public class MNKConsoleViewImpl implements MNKView {
+public class MNKConsoleConsoleViewImpl implements MNKConsoleView {
 
 //    @Override
 //    public void renderNextTurn(Matrix<Symbols> grid) {

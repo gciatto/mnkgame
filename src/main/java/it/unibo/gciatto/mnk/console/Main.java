@@ -1,10 +1,10 @@
 package it.unibo.gciatto.mnk.console;
 
 import it.unibo.gciatto.mnk.MNKMatch;
-import it.unibo.gciatto.mnk.console.control.MNKControl;
-import it.unibo.gciatto.mnk.console.control.impl.MNKControls;
+import it.unibo.gciatto.mnk.console.control.MNKConsoleControl;
+import it.unibo.gciatto.mnk.console.control.impl.MNKConsoleControls;
 import it.unibo.gciatto.mnk.impl.MNKMatches;
-import it.unibo.gciatto.mnk.console.view.impl.MNKViews;
+import it.unibo.gciatto.mnk.console.view.impl.MNKConsoleViews;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -27,9 +27,9 @@ public class Main {
 
     public static void main(String... args) throws IOException {
         final List<Integer> params = mnk(Arrays.asList(args));
-        final MNKMatch match = MNKMatches.create(params.get(0), params.get(1), params.get(2));
-        MNKViews.create(match);
-        final MNKControl ctrl = MNKControls.create(match);
+        final MNKMatch match = MNKMatches.newMatch(params.get(0), params.get(1), params.get(2));
+        MNKConsoleViews.newView(match);
+        final MNKConsoleControl ctrl = MNKConsoleControls.newControl(match);
 
         match.reset();
         while (true) {

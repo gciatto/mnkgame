@@ -9,15 +9,15 @@ import it.unibo.gciatto.misc.Tuple3;
  */
 public class Tuples {
 
-    public static <A> Tuple1<A> tuple(A a) {
+    public static <A> Tuple1<A> newTuple(A a) {
         return new Tuple1Impl<>(a);
     }
 
-    public static <A, B> Tuple2<A, B> tuple(A a, B b) {
+    public static <A, B> Tuple2<A, B> newTuple(A a, B b) {
         return new Tuple2Impl<>(a, b);
     }
 
-    public static <A, B, C> Tuple3<A, B, C> tuple(A a, B b, C c) {
+    public static <A, B, C> Tuple3<A, B, C> newTuple(A a, B b, C c) {
         return new Tuple3Impl<>(a, b, c);
     }
 }

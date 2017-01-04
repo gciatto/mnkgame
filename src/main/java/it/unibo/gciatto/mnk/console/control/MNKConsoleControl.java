@@ -7,7 +7,7 @@ import java.util.Optional;
 /**
  * Created by gciatto on 02/01/17.
  */
-public interface MNKControl {
+public interface MNKConsoleControl {
     Optional<MNKMatch> getModel();
     void setModel(MNKMatch model);
     void input();
