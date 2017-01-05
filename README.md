@@ -13,7 +13,7 @@ Generalized TicTacToe
     This will create the `mnkgame.jar` file into the `./build/libs/` directory.
 
 The syntax for the `.jar` program is:
-    ```sh
+    ```
     java -jar ./path/to/mnkgame.jar [-m <int>] [-n <int>] [-k <int>]
     ```
 
